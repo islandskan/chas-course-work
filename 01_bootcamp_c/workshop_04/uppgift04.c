@@ -1,5 +1,4 @@
 #include <stdio.h>
-// evaluate the priority of the aritmethic operators
 
 int main()
 {

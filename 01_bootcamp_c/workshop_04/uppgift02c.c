@@ -1,6 +1,4 @@
 #include <stdio.h>
-// ask for two characters (letters and symbols)
-// print the comparisions
 
 int main()
 {

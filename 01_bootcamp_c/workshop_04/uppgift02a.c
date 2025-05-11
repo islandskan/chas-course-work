@@ -1,6 +1,4 @@
 #include <stdio.h>
-// ask for two integers, positives and negatives
-// print all sorts of comparisions between the integers
 
 int main()
 {

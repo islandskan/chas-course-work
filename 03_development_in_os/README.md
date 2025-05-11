@@ -14,3 +14,5 @@
 -   Profiling, code analysis, benchmark, test, validating
 -   Performance optimization
 -   Documentation
+-   Arduino Basics
+-   Electronic fundamentals

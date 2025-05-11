@@ -1,6 +1,4 @@
 #include <stdio.h>
-// ask for two floating point numbers
-// print all variations of comparisions between these numbers
 
 int main()
 {

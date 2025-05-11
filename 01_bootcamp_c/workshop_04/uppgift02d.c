@@ -9,9 +9,6 @@ int main()
     bool compareAtoB = a < b;
     bool compareAtoC = a > c;
 
-    // printf("%d", compareAtoB);
-    // printf("%d", compareAtoC);
-
     printf("a < b AND a > c = %d\n", compareAtoB && compareAtoC);
     printf("a < b OR a > c = %d\n", compareAtoB || compareAtoC);
     printf("NOT(a < b AND a > c) = %d\n", !(compareAtoB && compareAtoC));

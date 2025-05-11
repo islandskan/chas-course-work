@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-// prints all variations with assignment operators
-
 int main()
 {
     int a = 2;
