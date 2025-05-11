@@ -1,14 +1,30 @@
-/*
-1. beräkna en fiktiv elräkning baserad på följande antaganden om prisnivåerna
-0-100: 0.25 kr
-101-200 : 0.75 kr
-201 - 500: 1.50 kr
-> 500 : 4 kr
+#include <stdio.h>
 
-Priset är 25 öre för enheter upp till 100 kr.
-Efter det ökar priset till 75 öre för alla enheter konsumerade över 100
-Men man betalr fortfarande bara 25 öre för de först 100 enheterna
-Frågar efter antal enheter konsumerade
-Beräknar priset baserat på respektive prisnivå och adderar summan av nivåerna till en total.
-skriv ut summan av det totala beräknade priset
-*/
+
+void calc_electricity(double* result, int* unit);
+
+int main() {
+    int unit = 0;
+    double result = 0.0;
+    printf("Enter number of units consumed electricity: ");
+    scanf("%d", &unit);
+    calc_electricity(&result, &unit);
+    printf("Total sum: %.2lf\n", result);
+    return 0;
+}
+
+void calc_electricity(double* result, int* unit) {
+
+    if (*unit <= 100) {
+        *result = *unit * 0.25;
+    }
+    else if (*unit > 100 && *unit <= 200) {
+        *result = (100 * 0.25) + ((*unit - 100) * 0.75);
+    }
+    else if (*unit > 200 && *unit <= 500) {
+        *result = (100 * 0.25) + (100 * 0.75) + ((*unit - 200) * 1.5);
+    }
+    else {
+        *result = (100 * 0.25) + (100 * 0.75) + ((100 * 1.5) * 3) + ((*unit - 500) * 4.0);
+    }
+}
