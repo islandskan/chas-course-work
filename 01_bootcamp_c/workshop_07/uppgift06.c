@@ -88,7 +88,7 @@ int main() {
         }
 
         /*
-        in my switch case, I want 0 to cause the program to exit. To make it work for now, the "continue check" is guarded by an if statement
+        in my switch case, I want 0 to cause the program to exit. at the moment the "continue check" is guarded by an if statement
         */
         if (running == YES) {
             while (1) {
