@@ -125,7 +125,7 @@ int main() {
         }
         temp_number = 0.0;
         result = 0.0;
-    } while (new_convert == 0x79 && new_convert != 0x6E);
+    } while (new_convert == YES && new_convert != NO);
     printf("\nBye");
     return 0;
 }

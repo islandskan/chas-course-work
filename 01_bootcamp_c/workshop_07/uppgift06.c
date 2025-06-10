@@ -1,18 +1,7 @@
-/*
-1. calculator
-2. present math operators: 0 = exit 1 = add 2 = sub 3 = multip. 4 = divide
-3. ask for two floating point numbers
-4. pick operation
-    - handle if user pick incorrect option
-5. calc numbers based on operation
-6. show calculation and result
-7. restart until user press 0
-8. handle incorrect inputs
-9. handle division by 0
-*/
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 #define BUFFER_SIZE 100
 #define YES 0x79
 #define NO 0x6E
@@ -27,7 +16,6 @@ int main() {
 
     do
     {
-
         printf("\n");
         for (int j = 0; j < 20; ++j) {
             printf("~*");
@@ -41,23 +29,31 @@ int main() {
                     menu_option = input_buffer[0] - '0'; // convert from ASCII value of that number to integer
                     if (menu_option >= 1 && menu_option <= 4) {
                         char* end_ptr;
-                        /*
-                        while(1)
-                        enter first number
-                        use fgets to get input
-                        use strof with input buffer and endptr to get the number
-                        check if endptr != input buffer AND (*end_ptr == '\n' || *endptr == '\0')
-                        break;
+                        while (1) {
+                            printf("Enter first number: ");
+                            if (fgets(input_buffer, sizeof(input_buffer), stdin)) {
+                                num1 = strtof(input_buffer, &end_ptr);
+                                if (end_ptr != input_buffer && (*end_ptr == '\n' || *end_ptr == '\0')) {
+                                    break;
+                                }
+                            }
+                            printf("Invalid number. try again\n");
+                        }
 
-                        printf(Invalid. Try again.)
-                        */
-
-                        /*
-                        while(1)
-                        enter second number
-                        repeat steps above
-                        if menu_option is 4 = division && num2 == 0, warn for division by 0 and try again
-                        */
+                        while (1) {
+                            printf("Enter second number: ");
+                            if (fgets(input_buffer, sizeof(input_buffer), stdin)) {
+                                num2 = strtof(input_buffer, &end_ptr);
+                                if (end_ptr != input_buffer && (*end_ptr == '\n' || *end_ptr == '\0')) {
+                                    if (menu_option == 4 && num2 == 0.0f) {
+                                        printf("Cannot divide by zero. Try again with another number\n");
+                                        continue;
+                                    }
+                                    break;
+                                }
+                            }
+                            printf("Invalid number. Try again\n");
+                        }
                     }
 
                     switch (menu_option) {
@@ -77,7 +73,7 @@ int main() {
                         printf("%.2f * %.2f = %.2f\n", num1, num2, result);
                         break;
                     case 4:
-                        result - num1 / num2;
+                        result = num1 / num2;
                         printf("%.2f / %.2f = %.2f\n", num1, num2, result);
                         break;
                     default:
@@ -91,6 +87,9 @@ int main() {
             }
         }
 
+        /*
+        in my switch case, I want 0 to cause the program to exit. To make it work for now, the "continue check" is guarded by an if statement
+        */
         if (running == YES) {
             while (1) {
                 printf("Do you want to contine? (y/n): ");
