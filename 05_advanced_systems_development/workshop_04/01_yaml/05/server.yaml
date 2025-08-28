@@ -1,0 +1,5 @@
+---
+server:
+  name: "exemple server"  # string, name of sever
+  ip:                     # string, ip address
+  port:                   # integer, port number

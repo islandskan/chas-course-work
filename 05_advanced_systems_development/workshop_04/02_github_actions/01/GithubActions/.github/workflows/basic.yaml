@@ -1,0 +1,14 @@
+---
+name: Basic Workflow
+
+on: [workflow_dispatch]
+
+jobs:
+  basic-workflow-job:
+    runs-on:ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+        - name: run a simple command (print a hello message)
+          run: echo "Hello this is a simple workflow running on Github Actions!"

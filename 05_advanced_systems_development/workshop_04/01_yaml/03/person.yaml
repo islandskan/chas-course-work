@@ -1,0 +1,8 @@
+---
+person:
+    name: 'Sigridur Eggertsdottir'
+    age: 32
+    hobbies:
+        - 'video games'
+        - 'textile crafts'
+        - 'diy'

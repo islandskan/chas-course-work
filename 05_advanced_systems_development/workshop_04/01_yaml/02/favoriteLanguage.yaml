@@ -1,0 +1,9 @@
+# block style
+---
+favoriteLanguage:
+    - c
+    - cpp
+    - python
+---
+# inline style
+favoriteLanguage: [c, cpp, python]

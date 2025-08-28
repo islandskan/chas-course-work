@@ -1,0 +1,23 @@
+---
+name: Basic Workflow
+
+on: [workflow_dispatch]
+
+jobs:
+  basic-workflow-job:
+    runs-on:ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+        - name: run a simple command (print a hello message)
+          run: echo "Hello this is a simple workflow running on Github Actions!"
+
+
+# on [workflow_dispatch] = vilket event som ska trigga workflowet. workflow_dispatch är användbart för manuella event triggers som inte är t.ex push eller pull
+
+# uses: actions/checkout@v4 = vilken github action som kommer att användas i detta steg, i detta fall är det den publica actionen "checkout" som checkar ut repot till the "runner". @4 är vilken version av Github action som används
+
+# run: echo "Hello this is a simple workflow running on Github Actions!" = run talar om vilket jobb eller kommando som ska exekveras av runnern. I detta fall ska runner printa meddelandet
+
+# how to manually run workflow = i Github, när Github workflown ligger uppe, navigera till fliken "Actions" -> Github Actions Demo -> Run workflow -> Välja vilken branch som workflowet ska köras på -> Klicka igen "Run workflow"
