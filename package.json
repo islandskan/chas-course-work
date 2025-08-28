@@ -1,0 +1,14 @@
+{
+  "name": "chas-course-work",
+  "version": "1.0.0",
+  "description": "Assignments, some notes, and individual extra curriculum",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo Build projects...",
+    "test": "echo Running tests..."
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
