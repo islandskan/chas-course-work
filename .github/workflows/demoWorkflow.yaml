@@ -1,0 +1,8 @@
+# name "A simple demo workflow"
+# trigger = on: push to main
+# job running in selected environment (runs-on)
+# run the job "demo-job" on windows-latest
+# 2 steps:
+# 1. run node --version to print the Node.js version
+# 2. run npm --version to print the NPM version
+# commit and push
