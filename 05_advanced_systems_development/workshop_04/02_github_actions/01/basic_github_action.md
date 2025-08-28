@@ -1,18 +1,19 @@
+# in real life: .github/workflows/basic.yaml
+
 ---
+
 name: Basic Workflow
 
 on: [workflow_dispatch]
 
 jobs:
-  basic-workflow-job:
-    runs-on:ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+basic-workflow-job:
+runs-on:ubuntu-latest
+steps: - name: Checkout repository
+uses: actions/checkout@v4
 
         - name: run a simple command (print a hello message)
           run: echo "Hello this is a simple workflow running on Github Actions!"
-
 
 # on [workflow_dispatch] = vilket event som ska trigga workflowet. workflow_dispatch är användbart för manuella event triggers som inte är t.ex push eller pull
 
