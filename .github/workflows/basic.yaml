@@ -5,7 +5,7 @@ on: [workflow_dispatch]
 
 jobs:
   basic-workflow-job:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
