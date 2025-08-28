@@ -16,3 +16,5 @@
 -   Documentation
 -   Arduino Basics
 -   Electronic fundamentals
+
+## Further practice/study
