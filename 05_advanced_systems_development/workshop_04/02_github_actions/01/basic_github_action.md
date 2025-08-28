@@ -1,5 +1,7 @@
 # in real life: .github/workflows/basic.yaml
 
+# Note: the .github folder HAS to be in the root of the repo
+
 ---
 
 name: Basic Workflow
