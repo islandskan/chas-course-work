@@ -1,0 +1,14 @@
+name: Scheduler demo job
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '*/5 * * * *'
+jobs:
+    scheduler-every-5-minute:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repository
+              uses: actions/checkout@v4
+
+            - name: run a simple log message
+              run: echo "hello my friend..."
