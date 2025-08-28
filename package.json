@@ -1,14 +1,13 @@
 {
-  "name": "chas-course-work",
-  "version": "1.0.0",
-  "description": "Assignments, some notes, and individual extra curriculum",
-  "main": "index.js",
-  "scripts": {
-    "build": "echo Build projects...",
-    "test": "echo Running tests..."
-
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "chas-course-work",
+    "version": "1.0.0",
+    "description": "Assignments, some notes, and individual extra curriculum",
+    "main": "index.js",
+    "scripts": {
+        "build": "mkdir -p && echo 'Demo page to upload, download, and deploy artifacts' > dist/index.html",
+        "test": "echo Running tests..."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }
