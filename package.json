@@ -4,7 +4,7 @@
     "description": "Assignments, some notes, and individual extra curriculum",
     "main": "index.js",
     "scripts": {
-        "build": "mkdir -p && echo 'Demo page to upload, download, and deploy artifacts' > dist/index.html",
+        "build": "mkdir -p dist && echo 'Demo page to upload, download, and deploy artifacts' > dist/index.html",
         "test": "echo Running tests..."
     },
     "keywords": [],
