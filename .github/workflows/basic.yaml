@@ -10,5 +10,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-        - name: run a simple command (print a hello message)
-          run: echo "Hello this is a simple workflow running on Github Actions!"
+      - name: run a simple command (print a hello message)
+        run: echo "Hello this is a simple workflow running on Github Actions!"
